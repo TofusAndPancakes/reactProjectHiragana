@@ -1,0 +1,274 @@
+
+/* Character Table */
+.characterTable {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    padding-bottom: 20px;
+
+    background: #EAEAEA;
+
+    display: flex;
+    justify-content: center;
+}
+
+.characterTableContainer {
+    width: 95%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin-top: 20px;
+
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+
+.characterTableInfoColumn {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    float: left;
+
+    margin-top: 25.5px;
+
+    right: 0%;
+
+    color: rgba(52, 58, 64, 0.8);
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 8;
+}
+
+.characterTableInfoColumnContent {
+    width: 20px;
+    height: 160px;
+    position: relative;
+    float: left;
+
+    text-align: center;
+    border-top: 1px solid rgba(93, 78, 96, 0.2);
+    border-bottom: 1px solid rgba(93, 78, 96, 0.2);
+}
+
+/* Character Table Info Fonts */
+.characterTableInfoColumn p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+    padding-top: 70px;
+    margin: 0px;
+}
+
+.characterTableInfoRowContent p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+    margin: 0px;
+}
+
+.characterTablePadding {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: right;
+
+    border-radius: 5px;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    /* Inside the Character Table */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.characterTableInfoRowContent {
+    width: 160px;
+    height: 25px;
+    position: relative;
+    float: left;
+
+    color: rgba(52, 58, 64, 0.8);
+    background-color: #ffffff;
+
+    border-left: 1px solid rgba(93, 78, 96, 0.2);
+    border-right: 1px solid rgba(93, 78, 96, 0.2);
+    border-bottom: 0.5px solid rgba(93, 78, 96, 0.2);
+
+    text-align: center;
+
+    z-index: 8;
+}
+
+/* Character Table Square */
+.characterTableColumn {
+    width: 160px;
+    height: auto;
+    position: relative;
+    float: right;
+
+    border-radius: 5px;
+
+    /* Inside of the Column */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.characterTableContent {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    border: 1px solid #FFFFFF;
+
+    box-shadow: inset 0 -25px 20px rgba(93, 78, 96, 0.2);
+
+    color: #ffffff;
+    background-color: #00aaff;
+
+    text-align: center;
+}
+
+.characterTableContentNull {
+    width: 160px;
+    height: 160px;
+    position: relative;
+
+    padding: 1px;
+}
+
+/* Character Table Square Fonts */
+.characterTableContent {
+    h3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 70px;
+        color: #ffffff;
+
+        margin: 0px;
+        padding-top: 25px;
+    }
+
+    p {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+
+        margin: 0px;
+        margin-top: 15px;
+    }
+}
+
+/* Character Table Breakpoint*/
+@media only screen and (max-width: 400px) {
+    .characterTableInfoColumnContent {
+        width: 20px;
+        height: 100px;
+    }
+
+    .characterTableInfoColumn p {
+        padding-top: 35px;
+        margin: 0px;
+    }
+
+    .characterTableInfoRowContent {
+        width: 100px;
+        height: 25px;
+    }
+
+    .characterTableColumn {
+        width: 100px;
+        height: auto;
+    }
+
+    .characterTableContent {
+        width: 100px;
+        height: 100px;
+    }
+
+    .characterTableContentNull {
+        width: 100px;
+        height: 100px;
+    }
+
+    .characterTableContent h3 {
+        font-size: 40px;
+        line-height: 1.2;
+        margin: 0px;
+        padding-top: 15px;
+    }
+
+    .characterTableContent p {
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 0px;
+        margin-top: 2px;
+    }
+}
+
+/* Character Table Quick Access */
+.characterTableQuick {
+    width: 30px;
+    height: 200px;
+
+    color: rgba(52, 58, 64, 0.8);
+    background-color: #ffffff;
+
+    position: absolute;
+    top: 50%;
+    /* bring your own prefixes */
+    transform: translateY(-50%);
+
+    border-radius: 0 5px 5px 0;
+    border-left: 2px solid rgba(93, 78, 96, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    z-index: 6;
+
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.characterTableQuick:hover{
+    opacity: 1;
+}
+
+.characterTableQuick p {
+    min-width: 100px;
+    height: auto;
+
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: -36px;
+
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+}
+
+.characterTableQuick img {
+    width: 30px;
+    height: auto;
+}
+
+.characterTableQuick .imgInverse img  {
+    transform-origin: center;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
